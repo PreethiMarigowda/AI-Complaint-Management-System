@@ -114,7 +114,7 @@ const COLORS = [
         localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/complaints/all",
+        "https://ai-complaint-backend-78ty.onrender.com/api/complaints/all",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -146,7 +146,7 @@ const COLORS = [
         localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:5000/api/complaints/${id}`,
+        `https://ai-complaint-backend-78ty.onrender.com/api/complaints/${id}`,
         { status },
         {
           headers: {

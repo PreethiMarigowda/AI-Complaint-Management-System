@@ -11,7 +11,7 @@ function Home() {
 
       try {
 
-        const response = await axios.get("http://localhost:5000/");
+        const response = await axios.get("https://ai-complaint-backend-78ty.onrender.com/");
 
         setMessage(response.data.message);
 

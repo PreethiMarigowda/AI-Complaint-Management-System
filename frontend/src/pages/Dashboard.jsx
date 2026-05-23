@@ -42,7 +42,7 @@ function Dashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/complaints/my",
+        "https://ai-complaint-backend-78ty.onrender.com/api/complaints/my",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -157,7 +157,7 @@ function Dashboard() {
       const token = localStorage.getItem("token");
 
       const response = await axios.post(
-        "http://localhost:5000/api/complaints/create",
+        "https://ai-complaint-backend-78ty.onrender.com/api/complaints/create",
         {
           title: formData.title,
           description: formData.description,
@@ -396,7 +396,7 @@ function Dashboard() {
               {complaint.image && (
 
                 <img
-                  src={`http://localhost:5000/${complaint.image}`}
+                  src={`https://ai-complaint-backend-78ty.onrender.com/${complaint.image}`}
                   alt="Complaint"
                   className="w-64 rounded-2xl border border-blue-500"
                 />
