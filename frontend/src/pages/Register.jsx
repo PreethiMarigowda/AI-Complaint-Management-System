@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Register() {
 
@@ -72,6 +73,7 @@ function Register() {
   };
 
   return (
+
     <div className="min-h-screen bg-black flex items-center justify-center px-6">
 
       <div className="bg-gray-900 w-full max-w-md p-10 rounded-3xl shadow-2xl">
@@ -94,6 +96,7 @@ function Register() {
         <form className="space-y-6" onSubmit={handleSubmit}>
 
           <div>
+
             <label className="block mb-2 text-gray-300">
               Full Name
             </label>
@@ -107,9 +110,11 @@ function Register() {
               required
               className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
             />
+
           </div>
 
           <div>
+
             <label className="block mb-2 text-gray-300">
               Email
             </label>
@@ -123,9 +128,11 @@ function Register() {
               required
               className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
             />
+
           </div>
 
           <div>
+
             <label className="block mb-2 text-gray-300">
               Password
             </label>
@@ -139,9 +146,11 @@ function Register() {
               required
               className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
             />
+
           </div>
 
           <div>
+
             <label className="block mb-2 text-gray-300">
               Confirm Password
             </label>
@@ -155,6 +164,7 @@ function Register() {
               required
               className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500"
             />
+
           </div>
 
           <button
@@ -165,6 +175,20 @@ function Register() {
           </button>
 
         </form>
+
+        {/* LOGIN LINK */}
+        <p className="text-gray-400 text-center mt-6">
+
+          Already have an account?{" "}
+
+          <Link
+            to="/login"
+            className="text-blue-400 hover:underline"
+          >
+            Login
+          </Link>
+
+        </p>
 
       </div>
 

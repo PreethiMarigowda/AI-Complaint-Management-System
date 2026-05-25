@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 function Login() {
@@ -50,7 +50,11 @@ function Login() {
       setMessage("Login Successful");
 
       // REDIRECT
-      navigate("/dashboard");
+      setTimeout(() => {
+
+        navigate("/dashboard");
+
+      }, 1000);
 
     } catch (error) {
 
@@ -77,6 +81,7 @@ function Login() {
           Login to continue
         </p>
 
+        {/* MESSAGE */}
         {message && (
           <div className="bg-blue-500 text-white text-center py-4 rounded-xl mb-8 text-xl">
             {message}
@@ -129,6 +134,20 @@ function Login() {
           </button>
 
         </form>
+
+        {/* REGISTER LINK */}
+        <p className="text-gray-400 text-center mt-6">
+
+          Don't have an account?{" "}
+
+          <Link
+            to="/register"
+            className="text-blue-400 hover:underline"
+          >
+            Register
+          </Link>
+
+        </p>
 
       </div>
 
